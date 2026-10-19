@@ -8,7 +8,7 @@
 
 body {
     /* Imagem de fundo responsiva que ocupa 100% da viewport */
-    background-image: url('./img/freepik-247284249.jpg'); /* Substitua pelo nome/caminho da sua foto */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/background.jpg'); /* Substitua pelo nome/caminho da sua foto */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -25,7 +25,7 @@ body {
 
 /* Card Principal com efeito Glassmorphism (vidro fosco) */
 .container {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.251);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -40,7 +40,7 @@ body {
 
 /* Título estilizado em negrito e tom laranja/avermelhado */
 .container h1 {
-    color: #ff3b00;
+    color: #f3d482;
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 20px;
@@ -51,15 +51,14 @@ body {
 .taskInputContainer {
     display: flex;
     align-items: center;
-    gap: 10px;
     margin-bottom: 20px;
 }
 
 /* Input em pílula totalmente arredondado */
 .taskInputContainer input {
-    flex: 1;
+    flex: 3;
     padding: 12px 20px;
-    border-radius: 50px;
+    border-radius: 10px 0 0 10px;
     border: none;
     outline: none;
     background: #ffffff;
@@ -73,13 +72,14 @@ body {
 
 /* Botão de adicionar "+" circular e escuro */
 .taskInputContainer button {
+    flex: 1;
     width: 44px;
     height: 44px;
-    border-radius: 50%;
+    border-radius: 0 10px 10px 0;
     border: none;
-    background-color: #000000;
+    background-color: #ddb23b;
     color: #ffffff;
-    font-size: 1.4rem;
+    font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -147,12 +147,13 @@ body {
 /* Barra de Progresso Arredondada */
 .progress-container {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #ffffff99;
     border-radius: 50px;
     height: 18px;
     overflow: hidden;
     padding: 2px;
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
 
 .progress-bar {
@@ -161,4 +162,10 @@ body {
     background-color: #00ee00;
     border-radius: 50px;
     transition: width 0.4s ease;
+}
+
+@media(max-width: 400px){
+    .taskInputContainer button{
+        font-size: 0.5rem;
+    }
 }

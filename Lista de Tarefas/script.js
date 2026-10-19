@@ -17,6 +17,14 @@ function addTask() {
     taskInput.value = "";
 }
 
+// Adiciona o evento de escuta de tecla
+taskInput.addEventListener('keydown', function(event) {
+    // Se a tecla pressionada for 'Enter', chama a função addTask
+    if (event.key === 'Enter') {
+        addTask();
+    }
+});
+
 function updateTaskList() {
     const taskList = document.getElementById('taskList');
     taskList.innerHTML = '';
