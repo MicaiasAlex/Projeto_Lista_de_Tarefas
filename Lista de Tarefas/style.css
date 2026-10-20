@@ -125,6 +125,7 @@ body {
     gap: 8px;
 }
 
+/* Botão de itens da lista de tarefas */
 .task-item button {
     background: transparent;
     border: none;
